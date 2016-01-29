@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <field name="asset_id" type="hidden" filter="unset" />
+    <fieldset name="settings"
+                  label="COM_COMPARISONCHART_SETTINGS_GLOBAL_MENU"
+    >
+		
+        <field name="show_title" type="radio"	default="0"	
+                       class="btn-group"
+                       label="COM_COMPARISONCHART_DESC" 
+                       description="COM_COMPARISONCHART_SETTINGS_SHOW_TITLE_DESC">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+		
+        <field name="title_text" type="text" size="30" default="ComparisonChart"
+                       label="COM_COMPARISONCHART_SETTINGS_CHART_TITLE_TEXT" 
+                       description="COM_COMPARISONCHART_SETTINGS_CHART_TITLE_TEXT_DESC">
+        </field>
+        <field name="pagination" type="list" default="expanded" label="COM_COMPARISONCHART_SETTINGS_PAGINATION" description="COM_COMPARISONCHART_SETTINGS_PAGINATION_DESC">
+            <option value="expanded">Top</option>
+            <option value="compact">Bottom</option>
+            <option value="counter">Both</option>
+        </field>
+    </fieldset>
+    <fieldset name="chart_look"
+        label="COM_COMPARISONCHART_CHART_VIEW"
+    >
+	
+        <field name="show_toogle_button" type="radio"	default="1"	
+                       class="btn-group"
+                       label="COM_COMPARISONCHART_SETTINGS_SHOW_TOOGLE_BUTTON" 
+                       description="COM_COMPARISONCHART_SETTINGS_SHOW_TOOGLE_BUTTON">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field name="show_hidden_param_button" type="radio"	default="0"	
+                        class="btn-group"
+                        label="COM_COMPARISONCHART_SETTINGS_SHOW_HP_BUTTON" 
+                        description="COM_COMPARISONCHART_SETTINGS_SHOW_HP_BUTTON">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field name="show_hidden_items_button" type="radio"	default="0"	
+                        class="btn-group"
+                        label="COM_COMPARISONCHART_SETTINGS_SHOW_HI_BUTTON" 
+                        description="COM_COMPARISONCHART_SETTINGS_SHOW_HI_BUTTON">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field name="show_xls_export_button" type="radio"	default="0"	
+                        class="btn-group"
+                        label="COM_COMPARISONCHART_SETTINGS_SHOW_EX_BUTTON" 
+                        description="COM_COMPARISONCHART_SETTINGS_SHOW_EX_BUTTON_DESC">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+	<field name="allow_to_hide_items" type="radio"	default="1"	
+                        class="btn-group"
+                        label="COM_COMPARISONCHART_SETTINGS_ALLOW_HI_BUTTON" 
+                        description="COM_COMPARISONCHART_SETTINGS_ALLOW_HI_BUTTON">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </field>
+        <field name="allow_to_hide_properties" type="radio"	default="1"	
+                        class="btn-group"
+                        label="COM_COMPARISONCHART_SETTINGS_ALLOW_HP_BUTTON" 
+                        description="COM_COMPARISONCHART_SETTINGS_ALLOW_HP_BUTTON">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </field>	
+                
+    </fieldset>
+    <fieldset name="images"
+                  label="COM_COMPARISONCHART_IMAGES"
+    >
+		
+        <field name="item_image" type="radio"	default="1"	
+                       class="btn-group"
+                       label="COM_COMPARISONCHART_SETTINGS_CHART_ITEM_IMAGE" 
+                       description="COM_COMPARISONCHART_SETTINGS_CHART_ITEM_IMAGE_DESC">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+		 <field name="item_image_width" type="text" size="30" default="75"
+                       label="COM_COMPARISONCHART_SETTINGS_CHART_ITEM_IMAGESIZE" 
+                       description="COM_COMPARISONCHART_SETTINGS_CHART_ITEM_IMAGESIZE_DESC">
+        </field>
+        
+    </fieldset>
+    <fieldset name="permissions"
+                  description="JCONFIG_PERMISSIONS_DESC"
+                  label="JCONFIG_PERMISSIONS_LABEL"
+    >
+        <field name="rules" type="rules"
+               component="com_comparisonchart"
+               filter="rules"
+               validate="rules"
+               label="JCONFIG_PERMISSIONS_LABEL"
+               section="component" />
+    </fieldset>
+</config>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="editors-xtd">
+	<name>plg_editors-xtd_comparisonchart</name>
+	<creationDate>March 2014</creationDate>
+	<author>Joomplace Team</author>
+    <authorEmail>support@joomplace.com</authorEmail>
+    <authorUrl>www.joomplace.com</authorUrl>
+    <copyright>(C) JoomPlace, www.joomplace.com</copyright>
+    <license>GNU/GPL http://www.gnu.org/copyleft/gpl.html</license>
+    <version>2.2.0 (build 001)</version>
+	<description>PLG_COMPARISONCHART_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="comparisonchart">comparisonchart.php</filename>
+		<filename>index.html</filename>
+	</files>
+	   <languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_editors-xtd_comparisonchart.sys.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.plg_editors-xtd_comparisonchart.ini</language>
+	</languages>
+</extension>

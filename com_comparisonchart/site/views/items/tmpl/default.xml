@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Id: default.xml 62 2010-11-28 16:08:16Z chdemko $ -->
+<metadata>
+	<layout title="COM_COMPARISONCHART_VIEW_ITEMS_TITLE">
+		<message>COM_COMPARISONCHART_VIEW_ITEMS_DESC</message>
+	</layout>
+	<fields
+		name="request"
+	>
+		<fieldset name="request">
+			<field
+				name="id"
+				type="sql"
+				label="COM_COMPARISONCHART_VIEW_ITEMS_CHART"
+				description="COM_COMPARISONCHART_VIEW_ITEMS_CHART_DESC"
+				query="SELECT `id`, `title` FROM `#__cmp_chart_list` WHERE `published`=1"
+				required="true"
+				key_field="id"
+				value_field="title"
+			/>
+		</fieldset>
+	</fields>
+</metadata>
+

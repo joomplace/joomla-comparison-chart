@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form
+    addfieldpath="/administrator/components/com_comparisonchart/models/fields"
+>
+    <fieldset
+        name="details"
+        label="COM_COMPARISONCHART_FIELDSET_DETAILS"
+    >
+        <field
+            name="id"
+            type="hidden"
+        />
+
+        <field
+            name="title"
+            type="text"
+            label="JGLOBAL_TITLE"
+            description="JFIELD_TITLE_DESC"
+            size="10"
+            class="inputbox"
+            required="true"
+            default=""
+        />
+        <field
+            name="chart_id"
+            type="sql"
+            query="SELECT id, title FROM #__cmp_chart_list"
+            key_field="id"
+            value_field="title"
+            label="COM_COMPARISONCHART_ITEM_CHART"
+            description="COM_COMPARISONCHART_ITEM_CHART_DESC"
+            class="inputbox"
+            required="true"
+            default="0"
+        />
+        <field
+            name="catid"
+            label="COM_COMPARISONCHART_ITEM_CATEGORY"
+            type="sql"
+            query="SELECT id, title FROM #__categories WHERE extension='com_comparisonchart'"
+            key_field="id"
+            value_field="title"
+            description="COM_COMPARISONCHART_ITEM_CATEGORY_DESC"
+            class="inputbox"
+            default=""          
+        />
+        <field
+            name="published" type="list"
+            class="inputbox" default="1"
+            size="1" label="JSTATUS"
+            description="JFIELD_PUBLISHED_DESC">
+            <option	value="1">JPUBLISHED</option>
+            <option	value="0">JUNPUBLISHED</option>			
+        </field>
+
+        <field
+            name="image"
+            type="media"
+            label="COM_COMPARISONCHART_ITEM_IMAGE"
+            description="COM_COMPARISONCHART_ITEM_IMAGE_DESC"
+            class="inputbox"
+            required="false"
+            default=""
+        />
+        <field
+            name="description"	
+            type="editor" 
+            buttons="no" 
+            id="description"	
+            class="editor"
+            label="COM_COMPARISONCHART_ITEM_DESCRIPTION"
+            description="COM_COMPARISONCHART_ITEM_DESCRIPTION_DESC"
+            rows="20"	
+            cols="20" 
+            filter="raw" 
+        />
+		
+    </fieldset>
+    <fieldset
+        name="content"
+        label="COM_COMPARISONCHART_FIELDSET_CONTENT"
+    >
+        <field
+            name="content"
+            type="chartcontent"
+        />
+
+    </fieldset>
+</form>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form
+    addfieldpath="/administrator/components/com_comparisonchart/models/fields"
+>
+    <fieldset
+        name="details"
+        label="COM_COMPARISONCHART_FIELDSET_DETAILS"
+    >
+        <field
+            name="id"
+            type="hidden"
+        />
+
+        <field
+            name="name"
+            type="text"
+            label="JGLOBAL_TITLE"
+            description="JFIELD_TITLE_DESC"
+            size="10"
+            class="inputbox"
+            required="true"
+            default=""
+        />
+        <field
+            name="chart_id"
+            type="sql"
+            query="SELECT id, title FROM #__cmp_chart_list"
+            key_field="id"
+            value_field="title"
+            label="COM_COMPARISONCHART_ITEM_CHART"
+            description="COM_COMPARISONCHART_ITEM_CHART_DESC"
+            class="inputbox"
+            required="true"
+            default="0"
+        />
+
+        <field
+                name="type" type="list"
+                size="1" label="COM_COMPARISONCHART_FIELD_ROW_TYPE" required="true"
+                 >
+            <option value="int">COM_COMPARISONCHART_FIELD_ROW_TYPE_INT</option>
+            <option value="text">COM_COMPARISONCHART_FIELD_ROW_TYPE_TEXT</option>
+            <option	value="check">COM_COMPARISONCHART_FIELD_ROW_TYPE_CHECK</option>
+            <option	value="spacer">COM_COMPARISONCHART_FIELD_ROW_TYPE_SPACER</option>
+            <option	value="Rating">COM_COMPARISONCHART_FIELD_ROW_TYPE_RATING</option>
+        </field>
+        <field
+            name="published" type="list"
+            class="inputbox" default="1"
+            size="1" label="JSTATUS"
+            description="JFIELD_PUBLISHED_DESC">
+            <option	value="1">JPUBLISHED</option>
+            <option	value="0">JUNPUBLISHED</option>			
+        </field>
+        <field
+            name="description"
+            type="editor" 
+            buttons="no" 
+            id="description"	
+            class="editor"
+            label="COM_COMPARISONCHART_FIELD_ROW_DESCRIPTION"
+            description="COM_COMPARISONCHART_FIELD_ROW_DESCRIPTION_DESC"
+            rows="20"	
+            cols="20" 
+            filter="raw" 
+        />
+		
+    </fieldset>
+</form>

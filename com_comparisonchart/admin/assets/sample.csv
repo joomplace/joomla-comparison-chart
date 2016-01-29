@@ -1,0 +1,6 @@
+;"Huawei U8650 Sonic";"Apple iPhone 4 (16Gb)";"ZTE Blade";"Samsung i9100 Galaxy S II";"Nokia Lumia 800";"HTC Wildfire S"
+Wi-fi;+;+;+;-;-;+
+GPRS;-;+;-;+;+;-
+GSM;"GSM 890";"GSM 920, 890";GSM+;"GSM 890";GSM+;"GSM 920, 890"
+3G;EDGE;EGPRS;3G+;EDGE;3G+;EGPRS
+Processor;800;1800;960;769;700;1001

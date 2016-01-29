@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_JPOBITUARY_VIEW_MAIN_TITLE" ></layout>
+	<fields
+		name="params"
+	>
+		<fieldset
+			name="main"
+			label="COM_JPOBITUARY_SETTINGS_GLOBAL_MENU"
+		>
+			<field name="show_title" type="radio" default="1"	
+				label="COM_JPOBITUARY_SETTINGS_TITLE" 
+				description="COM_JPOBITUARY_SETTINGS_TITLE_DESC">
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+			
+			<field name="title_text" type="text" size="30" default="JpObituary"
+				label="COM_JPOBITUARY_SETTINGS_TITLE_TEXT" 
+				description="COM_JPOBITUARY_SETTINGS_TITLE_TEXT_DESC">
+			</field>
+
+			<field name="show_intro" type="radio" default="0"	
+				label="COM_JPOBITUARY_SETTINGS_INTRO" 
+				description="COM_JPOBITUARY_SETTINGS_INTRO_DESC">
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+					
+			<field name="intro_text" type="textarea" 
+				id="intro_top" class="editor"
+				label="COM_JPOBITUARY_SETTINGS_INTRO_TEXT"
+				description="COM_JPOBITUARY_SETTINGS_INTRO_TEXT_DESC"
+				rows="8" cols="40" filter="raw" buttons="no" width="300px" height="200px" />
+
+			<field name="plugin_enabled" type="radio" default="0" 
+					label="COM_JPOBITUARY_SETTINGS_PLUGIN" 
+					description="COM_JPOBITUARY_SETTINGS_PLUGIN_DESC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+		</fieldset>
+
+		<fieldset
+			name="category"
+			label="COM_JPOBITUARY_SETTINGS_CATEGORY_MENU" 
+		>
+			<field name="category_title" type="radio" default="1"	
+				label="COM_JPOBITUARY_SETTINGS_CATEGORY_TITLE" 
+				description="COM_JPOBITUARY_SETTINGS_CATEGORY_TITLE_DESC">
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+			
+			<field name="category_description" type="radio"	default="1"	
+				label="COM_JPOBITUARY_SETTINGS_CATEGORY_DESCRIPTION" 
+				description="COM_JPOBITUARY_SETTINGS_CATEGORY_DESCRIPTION_DESC">
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+			
+			<field name="category_image" type="radio" default="0"	
+				label="COM_JPOBITUARY_SETTINGS_IMAGE" 
+				description="COM_JPOBITUARY_SETTINGS_IMAGE_DESC">
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field name="category_plugin_enabled" type="radio" default="0" 
+					label="COM_JPOBITUARY_SETTINGS_PLUGIN" 
+					description="COM_JPOBITUARY_SETTINGS_PLUGIN_DESC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field name="spacer1" type="spacer" hr="true" />
+			
+			<field name="category_items_count" type="text" default="10" size="5"
+					label="COM_JPOBITUARY_SETTINGS_COUNT_ITEMS" 
+					description="COM_JPOBITUARY_SETTINGS_COUNT_ITEMS_DESC">
+			</field>
+			
+			<field name="category_items_description" type="radio" default="1"	
+				label="COM_JPOBITUARY_SETTINGS_ITEMS_DESCRIPTION" 
+				description="COM_JPOBITUARY_SETTINGS_ITEMS_DESCRIPTION_DESC">
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+			
+			<field name="category_hits_enabled" type="radio" default="1" 
+					label="COM_JPOBITUARY_SETTINGS_HITS" 
+					description="COM_JPOBITUARY_SETTINGS_HITS_DESC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field name="category_rating_enabled" type="radio" default="1" 
+					label="COM_JPOBITUARY_SETTINGS_RATING" 
+					description="COM_JPOBITUARY_SETTINGS_RATING_DESC">
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field name="category_custom_enabled" type="radio" default="1" 
+					label="COM_JPOBITUARY_SETTINGS_CUSTOM" 
+					description="COM_JPOBITUARY_SETTINGS_CUSTOM_DESC">
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+		
+			<field name="category_preview_width" type="text" default="100" size="5"
+					label="COM_JPOBITUARY_SETTINGS_CATEGORY_IMAGE_WIDTH" 
+					description="COM_JPOBITUARY_SETTINGS_CATEGORY_IMAGE_WIDTH_DESC">
+			</field>
+			
+			<field name="category_preview_height" type="text" default="100" size="5"
+					label="COM_JPOBITUARY_SETTINGS_CATEGORY_IMAGE_HEIGHT" 
+					description="COM_JPOBITUARY_SETTINGS_CATEGORY_IMAGE_HEIGHT_DESC">
+			</field>
+		</fieldset>
+
+		<fieldset
+			name="item"
+			label="COM_JPOBITUARY_SETTINGS_ITEM_MENU"
+			>
+			<field name="item_title" type="radio" default="1"	
+				label="COM_JPOBITUARY_SETTINGS_CATEGORY_TITLE" 
+				description="COM_JPOBITUARY_SETTINGS_CATEGORY_TITLE_DESC">
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+			
+			<field name="item_description" type="radio"	default="1"	
+				label="COM_JPOBITUARY_SETTINGS_CATEGORY_DESCRIPTION" 
+				description="COM_JPOBITUARY_SETTINGS_CATEGORY_DESCRIPTION_DESC">
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field name="item_plugin_enabled" type="radio" default="0" 
+					label="COM_JPOBITUARY_SETTINGS_PLUGIN" 
+					description="COM_JPOBITUARY_SETTINGS_PLUGIN_DESC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			
+			<field name="item_hits_enabled" type="radio" default="1" 
+					label="COM_JPOBITUARY_SETTINGS_HITS" 
+					description="COM_JPOBITUARY_SETTINGS_HITS_DESC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field name="item_rating_enabled" type="radio" default="1" 
+					label="COM_JPOBITUARY_SETTINGS_RATING" 
+					description="COM_JPOBITUARY_SETTINGS_RATING_DESC">
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field name="item_custom_enabled" type="radio" default="1" 
+					label="COM_JPOBITUARY_SETTINGS_CUSTOM" 
+					description="COM_JPOBITUARY_SETTINGS_CUSTOM_DESC">
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field name="item_comment_enable" type="radio" default="0" 
+					label="COM_JPOBITUARY_SETTINGS_COMMENT" 
+					description="COM_JPOBITUARY_SETTINGS_COMMENT_DESC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field name="item_bookmark_enable" type="radio" default="0" 
+					label="COM_JPOBITUARY_SETTINGS_BOOKMARK" 
+					description="COM_JPOBITUARY_SETTINGS_BOOKMARK_DESC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+
+			<field name="item_preview_width" type="text" default="300" size="5"
+					label="COM_JPOBITUARY_SETTINGS_ITEM_IMAGE_WIDTH" 
+					description="COM_JPOBITUARY_SETTINGS_ITEM_IMAGE_WIDTH_DESC">
+			</field>
+			
+			<field name="item_preview_height" type="text" default="300" size="5"
+					label="COM_JPOBITUARY_SETTINGS_ITEM_IMAGE_HEIGHT" 
+					description="COM_JPOBITUARY_SETTINGS_ITEM_IMAGE_HEIGHT_DESC">
+			</field>
+		</fieldset>
+	</fields>
+</metadata>

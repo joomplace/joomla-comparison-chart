@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_COMPARISONCHART_VIEW_MAIN_TITLE" ></layout>
+	<fields
+		name="params"
+	>
+		<fieldset
+			name="main"
+			label="COM_COMPARISONCHART_SETTINGS_GLOBAL_MENU"
+		>
+			<field name="show_title" type="radio" default="1"	
+				label="COM_COMPARISONCHART_SETTINGS_TITLE" 
+				description="COM_COMPARISONCHART_SETTINGS_TITLE_DESC">
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+			
+			<field name="title_text" type="text" size="30" default="Comparsion Chart"
+				label="COM_COMPARISONCHART_SETTINGS_TITLE_TEXT" 
+				description="COM_COMPARISONCHART_SETTINGS_TITLE_TEXT_DESC">
+			</field>
+
+			<field name="show_intro" type="radio" default="0"	
+				label="COM_COMPARISONCHART_SETTINGS_INTRO" 
+				description="COM_COMPARISONCHART_SETTINGS_INTRO_DESC">
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+					
+			<field name="intro_text" type="textarea" 
+				id="intro_top" class="editor"
+				label="COM_COMPARISONCHART_SETTINGS_INTRO_TEXT"
+				description="COM_COMPARISONCHART_SETTINGS_INTRO_TEXT_DESC"
+				rows="8" cols="40" filter="raw" buttons="no" width="300px" height="200px" />
+
+		</fieldset>
+
+		<fieldset
+			name="category"
+			label="COM_COMPARISONCHART_SETTINGS_CATEGORY_MENU"
+		>
+			<field name="category_title" type="radio" default="1"
+				label="COM_COMPARISONCHART_SETTINGS_CATEGORY_TITLE"
+				description="COM_COMPARISONCHART_SETTINGS_CATEGORY_TITLE_DESC">
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field name="category_description" type="radio"	default="1"
+				label="COM_COMPARISONCHART_SETTINGS_CATEGORY_DESCRIPTION"
+				description="COM_COMPARISONCHART_SETTINGS_CATEGORY_DESCRIPTION_DESC">
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field name="category_image" type="radio" default="0"
+				label="COM_COMPARISONCHART_SETTINGS_IMAGE"
+				description="COM_COMPARISONCHART_SETTINGS_IMAGE_DESC">
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+
+		</fieldset>
+
+
+	</fields>
+</metadata>

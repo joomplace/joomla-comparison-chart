@@ -1,0 +1,79 @@
+.pbigimage {
+    margin: 30px;
+    text-align: center;
+}
+
+.pcheck {
+    color: #999999;
+    font: 9px Tahoma, Arial, Geneva, Helvetica, sans-serif;
+    padding: 10px 5px 10px 0;
+    text-align: center;
+}
+
+.pcompbtn {
+    display: block;
+    margin: 10px 0;
+}
+
+.pdadv {
+    background-color: #FFFF99;
+}
+
+.pdescr {
+    font: 11px Verdana, Geneva, Arial, Helvetica, sans-serif;
+    padding: 10px 5px;
+}
+
+.pdimage {
+    border-bottom: 1px solid #DDDDDD;
+    font: 9px Tahoma, Arial, Geneva, Helvetica, sans-serif;
+    margin: 15px 15px 10px 15px;
+    padding-bottom: 10px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.pdimage img {
+    margin-bottom: 3px;
+}
+
+.pdinfohead {
+    font-weight: bold;
+    width: 35%;
+}
+
+.pdtable {
+	width: 100%;
+	table-layout: auto;
+	empty-cells: show;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.pdtable td {
+    padding: 5px 10px;
+}
+
+.pdtable td a:hover {
+    background: none;
+}
+
+.pdtable td.pline {
+    padding: 0;
+}
+
+.pdtable tr {
+    font-size: 11px;
+}
+
+.pdtable tr.pdsection {
+    background-color: #EEEEEE;
+    color: #000000;
+    font: bold 14px Arial, Helvetica, sans-serif;
+}
+
+.pdtable tr.pdsection td {
+    border-bottom: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    vertical-align: top;
+}

@@ -1,0 +1,55 @@
+.pcompbtn {
+    display: block;
+    margin: 10px 0;
+}
+
+.pdadv {
+}
+
+.pdescr {
+    padding: 10px 5px;
+}
+
+.pdimage {
+    margin: 15px 15px 10px 15px;
+    padding-bottom: 10px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.pdimage img {
+    margin-bottom: 3px;
+}
+
+.pdinfohead {
+    font-weight: bold;
+    width: 35%;
+}
+
+.pdtable {
+	width: 100%;
+	table-layout: auto;
+	empty-cells: show;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.pdtable td {
+    padding: 7px 10px;
+}
+
+.pdtable td a:hover {
+    background: none;
+}
+
+.pdtable td.pline {
+    padding: 0;
+}
+
+.pdtable tr.pdsection td {
+    vertical-align: top;
+}
+
+.pdtable img {
+	margin: 0px;
+}

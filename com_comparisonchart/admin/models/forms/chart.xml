@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form
+	addfieldpath="/administrator/components/com_comparisonchart/models/fields"
+>
+	
+	<fieldset
+		name="details"
+		label="COM_COMPARISONCHART_FIELDSET_DETAILS"
+	>
+		<field
+			name="id"
+			type="hidden"
+		/>
+		<field
+			name="title"
+			type="text"
+			label="JGLOBAL_TITLE"
+			description="JFIELD_TITLE_DESC"
+			size="10"
+			class="inputbox"
+			required="true"
+			default=""
+		/>
+		<field
+			name="alias"
+			type="text"
+			label="JFIELD_ALIAS_LABEL"
+			description="JFIELD_ALIAS_DESC"
+			size="20"
+			class="inputbox"
+			required="false"
+			default=""
+		/>
+        <!--<field-->
+        			<!--name="catid"-->
+        			<!--type="sql"-->
+        			<!--query="SELECT id, title FROM #__categories WHERE extension='com_comparisonchart' AND level=1"-->
+        			<!--key_field="id"-->
+        			<!--value_field="title"-->
+        			<!--class="inputbox"-->
+        			<!--label="COM_COMPARISONCHART_CHART_CATEGORY"-->
+        			<!--description="COM_COMPARISONCHART_CHART_CATEGORY_DESC"-->
+        			<!--default="1"-->
+
+        		<!--/>-->
+
+        <field
+        			name="catid"
+        			type="category"
+        			extension="com_comparisonchart"
+        			key_field="id"
+        			value_field="title"
+        			class="inputbox"
+        			label="COM_COMPARISONCHART_CHART_CATEGORY"
+        			description="COM_COMPARISONCHART_CHART_CATEGORY_DESC"
+        			default="1"
+
+        		/>
+
+
+		<field
+			name="published" type="list"
+			class="inputbox" default="1"
+			size="1" label="JSTATUS"
+			description="JFIELD_PUBLISHED_DESC">
+			<option	value="1">JPUBLISHED</option>
+			<option	value="0">JUNPUBLISHED</option>			
+		</field>
+		<field
+			name="description_before"	
+			type="editor" 
+			buttons="no" 
+			id="description_before"	
+			class="editor"
+			label="COM_COMPARISONCHART_CHART_DESCRIPTION_BEFORE"
+			description="COM_COMPARISONCHART_CHART_DESCRIPTION_BEFORE_DESC"
+			rows="20"	
+			cols="20" 
+			filter="raw" 
+		/>
+		<field
+			name="description_after"	
+			type="editor" 
+			buttons="no" 
+			id="description_after"	
+			class="editor"
+			label="COM_COMPARISONCHART_CHART_DESCRIPTION_AFTER"
+			description="COM_COMPARISONCHART_CHART_DESCRIPTION_AFTER_DESC"
+			rows="20"	
+			cols="20" 
+			filter="raw" 
+		/>
+	</fieldset>
+	<fieldset
+		name="template"
+		label="COM_COMPARISONCHART_FIELDSET_TEMPLATE"
+	>
+		<field
+			name="css"
+			type="sql"
+			query="SELECT id, temp_name FROM #__cmp_chart_templates"
+			key_field="id"
+			value_field="temp_name"
+			class="inputbox"
+			label="COM_COMPARISONCHART_CHART_TEMPLATE"
+			description="COM_COMPARISONCHART_CHART_TEMPLATE_DESC"
+			onchange="updateTemplate(this.value);"
+			default="1"
+			
+		/>
+		<field
+			name="preview"
+			type="preview"
+			target="css"
+			label="COM_COMPARISONCHART_CHART_PREVIEW"
+		/>
+	</fieldset>
+	<fieldset
+		name="chartrow"
+		label="COM_COMPARISONCHART_FIELDSET_ROWS"
+	>
+		<field
+			name="rows"
+			type="chartrow"
+		/>
+	</fieldset>
+</form>

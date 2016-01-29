@@ -1,0 +1,71 @@
+-----------------Comparison Chart version 2.1.4 -----------------
+- Joomla 3.x compatibility release
+- Add Manage Control Panel
+- Modified interface (CSS)
+- Ability to copy(clone) chart's property
+- Added visual editor to edit Chart properties
+- Add cart on front-end
+- Fixed content plugin
+- Minor bugfixing
+
+-----------------Comparison Chart version 2.1.3 -----------------
+- Fixed content plugin
+- Added compatibility with new php versions
+- Minor bugfixing
+
+-----------------Comparison Chart version 2.1.2 -----------------
+- Fixed settings conflict in back-end
+- Fixed issue with height of chart table head
+
+-----------------Comparison Chart version 2.1.1 -----------------
+- Joomla! 2.5 compatible release
+
+-----------------Comparison Chart version 2.1.0 -----------------
+- Fixed multiple bugs 
+- Added possibility to assign chart items to categories
+- Added possibility to export compared items to XLS file
+- Updated language file
+
+-----------------Comparison Chart version 2.0.2 -----------------
+- Added option to allow image selection for the Hide button
+- Modified interface (CSS)
+- Fixed a properties-related bug
+- Updated language file
+
+-----------------Comparison Chart version 2.0.1 -----------------
+The changes in this release are applied to the component for Joomla 1.7 only and include:
+-	Completely based on MVC pattern
+-	The ability to migrate data from earlier versions of Joomla 1.5
+-	Extended Joomla 1.7 permissions
+-	Configurable templates + 3 default ones
+-	A new Chart Items menu type that is used for selection of different items and adding them to a chart for comparison
+-	New Rating type of chart properties
+-	Built-in Best Value option that would highlight best/worst items if added to the needed parameters
+-	The ability to hide the parameters with the same values
+
+-----------------Comparison Chart version 1.2.1 -----------------
+
+30 Sept 2010
+- Fixed import and export of charts
+
+9 June 2010
+- Added option, which set width of the first column
+- Fixed interface
+- Fixed bugs
+ 
+13-02-2010
+ - ability to copy(clone) chart
+15-02-2010
+ - ability to set column width
+
+
+
+-----------------Comparison Chart version 1.1.6 -----------------
+
+03-03-2010 new ver 1.1.6:
+ - added description to rows (properties)
+ - added new type of row(property) - 'Delimiter'
+05-03-2010 ver 1.1.6:
+- Added AJAX news on "About" page
+26-03-2010 ver 1.1.6: - Fixed bug
+

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form
+	addfieldpath="/administrator/components/com_comparisonchart/models/fields"
+>
+	<fieldset
+		name="import"
+		label="COM_COMPARISONCHART_FIELDSET_IMPORT"
+	>
+		<field
+			name="file"
+			type="file"
+			label="COM_COMPARISONCHART_IMPORT_FILE"
+			description="COM_COMPARISONCHART_IMPORT_FILE_DESC"
+			required="true"
+			default=""
+		/>
+		<field
+			name="cid"
+			type="sql"
+			query="SELECT id, title FROM #__cmp_chart_list"
+			key_field="id"
+			value_field="title"
+			label="COM_COMPARISONCHART_IMPORT_CHART"
+			description="COM_COMPARISONCHART_IMPORT_CHART_DESC"
+			required="true"
+			default=""
+		/>
+		<field
+			name="submit"
+			type="submit"
+			label="COM_COMPARISONCHART_IMPORT_SUBMIT"
+			class="button"
+			default=""
+		/>
+	</fieldset>
+</form>

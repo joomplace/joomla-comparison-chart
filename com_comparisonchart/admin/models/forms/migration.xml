@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+	<form 
+		addfieldpath="/administrator/components/com_comparisonchart/models/fields"
+	>
+	<fieldset name="main"
+		label="COM_COMPARISONCHART_MIGRATION" >
+
+		<field name="asset_id" type="hidden" filter="unset" />
+		
+	</fieldset>	
+	</form>
+
+

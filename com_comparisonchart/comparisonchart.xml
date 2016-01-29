@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade" >
+        <name>COM_COMPARISONCHART</name>
+		<creationDate>March 2014</creationDate>
+		<author>JoomPlace Team</author>
+        <authorEmail>support@joomplace.com</authorEmail>
+        <authorUrl>www.joomplace.com</authorUrl>
+        <copyright>(C) JoomPlace, www.joomplace.com</copyright>
+        <license>GNU/GPL http://www.gnu.org/copyleft/gpl.html</license>
+        <version>2.2.0 (build 001)</version>
+        <description>COM_COMPARISONCHART_DESC</description>
+
+		<scriptfile>script.php</scriptfile>
+
+		<install>
+			<sql>
+				<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+			</sql>
+		</install>
+		<uninstall>
+			<sql>
+				<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+			</sql>
+		</uninstall>
+		
+        <files folder="site">
+			<filename>index.html</filename>
+			<filename>comparisonchart.php</filename>
+			<filename>controller.php</filename>				
+			<filename>router.php</filename>					
+			<folder>models</folder>
+			<folder>assets</folder>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>views</folder>
+        </files>
+
+		<languages folder="site">
+			<language tag="en-GB">language/en-GB/en-GB.com_comparisonchart.ini</language>
+		</languages>
+
+        <administration>
+			<menu img="/administrator/components/com_comparisonchart/assets/images/jp_menu_pic.gif">COM_COMPARISONCHART</menu>
+			<submenu>
+				<menu link="option=com_comparisonchart&amp;view=about" view="about" img="/administrator/components/com_comparisonchart/assets/images/about.png" alt="COM_COMPARISONCHART_MANAGE_ABOUT">COM_COMPARISONCHART_MANAGE_ABOUT</menu>
+				<menu link="option=com_categories&amp;view=categories&amp;extension=com_comparisonchart" view="categories" img="components/com_comparisonchart/assets/images/categories.png" alt="COM_COMPARISONCHART_MANAGE_CATEGORIES">COM_COMPARISONCHART_MANAGE_CATEGORIES</menu>
+				<menu link="option=com_comparisonchart&amp;view=charts" view="charts" img="/administrator/components/com_comparisonchart/assets/images/charts.png" alt="COM_COMPARISONCHART_MANAGE_CHARTS">COM_COMPARISONCHART_MANAGE_CHARTS</menu>
+				<menu link="option=com_comparisonchart&amp;view=items" view="items" img="/administrator/components/com_comparisonchart/assets/images/items.png" alt="COM_COMPARISONCHART_MANAGE_ITEMS">COM_COMPARISONCHART_MANAGE_ITEMS</menu>
+				<menu link="option=com_comparisonchart&amp;view=templates" view="items" img="/administrator/components/com_comparisonchart/assets/images/templates.png" alt="COM_COMPARISONCHART_MANAGE_TEMPLATES">COM_COMPARISONCHART_MANAGE_TEMPLATES</menu>
+		</submenu>
+				
+			<languages folder="admin">
+				<language tag="en-GB">language/en-GB/en-GB.com_comparisonchart.ini</language>
+				<language tag="en-GB">language/en-GB/en-GB.com_comparisonchart.sys.ini</language>
+			</languages>
+				
+			<files folder="admin">
+				<filename>index.html</filename>
+				<filename>comparisonchart.php</filename>
+				<filename>controller.php</filename>
+				<filename>access.xml</filename>
+				<filename>config.xml</filename>
+				<filename>changelog.txt</filename>
+				<folder>assets</folder>
+				<folder>comparisonchart</folder>
+				<folder>controllers</folder>
+				<folder>helpers</folder>
+				<folder>models</folder>
+				<folder>sql</folder>
+				<folder>tables</folder>
+				<folder>views</folder>
+			</files>
+        </administration> 
+</extension>
