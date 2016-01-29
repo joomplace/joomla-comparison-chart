@@ -869,10 +869,12 @@ table#jform_description_tbl {
     display: none;
 }
 
+.items-import fieldset ,
 .items-import {
-    width: 200px;
-    position: absolute;
-    margin-top: 220px;
+	background: transparent;
+}
+.items-import {
+	
 }
 
 #notification {

@@ -60,16 +60,51 @@ $sortFields = $this->getSortFields();
 
 <div class="parent-wrap">
 
-    <form action="<?php if(intval($chart_id)){echo JRoute::_('index.php?option=com_comparisonchart&view=items&filter_chart='.intval($chart_id));}else{echo JRoute::_('index.php?option=com_comparisonchart&view=items');} ?>" method="post"
-          name="adminForm" id="adminForm">
         <?php if (!empty($this->sidebar)) { ?>
-        <div id="j-sidebar-container" class="span2">
+        <div id="j-sidebar-container" style="margin-left: -22px;">
             <?php echo $this->sidebar; ?>
+			<fieldset class="items-import filter-select">
+				<h4 class="page-header"><?php echo JText::_('COM_COMPARISONCHART_IMPORT_CSV'); ?>:</h4>
+				<form action="<?php echo JRoute::_('index.php?option=com_comparisonchart&task=chart.importItems'); ?>"
+					  method="post" name="importForm" class="importForm" enctype="multipart/form-data">
+					<?php
+					foreach ($this->form->getFieldsets() as $fieldset) {
+						$fields = $this->form->getFieldset($fieldset->name);
+						if (count($fields) > 0) {
+						   // echo JHtml::_('tabs.panel', JText::_($fieldset->label), 'item-' . $fieldset->name);
+							?>
+							<div class="items-import-adminform">
+								<fieldset class="adminform">
+										<?php
+										foreach ($this->form->getFieldset($fieldset->name) as $field) {
+											?>
+											<div class="control-group">
+												<?php echo $field->label;?>
+												<div class="controls">
+													<?php echo $field->input; ?>
+												</div>
+											</div>
+										<?php } ?>
+									<div class="ex_down_sample">
+										<a href="index.php?option=com_comparisonchart&task=downloadsample"
+										   alt=""><?php echo JText::_('COM_COMPARISONCHART_DOWNLOAD_EXAMPLE'); ?></a>
+									</div>
+								</fieldset>
+							</div>
+						<?php
+						}
+					}
+					?>
+					<?php echo JHtml::_('form.token'); ?>
+				</form>
+			</fieldset>
         </div>
         <div style="margin-top: 10px;" id="j-main-container" class="span10">
             <?php } else { ?>
-            <div style="margin-top: 10px;" id="j-main-container">
-                <?php } ?>
+		<div style="margin-top: 10px;" id="j-main-container">
+			<?php } ?>
+			<form action="<?php if(intval($chart_id)){echo JRoute::_('index.php?option=com_comparisonchart&view=items&filter_chart='.intval($chart_id));}else{echo JRoute::_('index.php?option=com_comparisonchart&view=items');} ?>" method="post"
+				name="adminForm" id="adminForm">
                 <div id="filter-bar" class="btn-toolbar">
                     <div class="filter-search btn-group pull-left">
                         <!-- <label for="filter_search" class="element-invisible"><?php echo JText::_('COM_CONTENT_FILTER_SEARCH_DESC'); ?></label>-->
@@ -248,49 +283,11 @@ $sortFields = $this->getSortFields();
                     <input type="hidden" name="filter_order" value="<?php echo $listOrder; ?>"/>
                     <input type="hidden" name="filter_order_Dir" value="<?php echo $listDirn; ?>"/>
                     <?php echo JHtml::_('form.token'); ?>
-                </div>
-    </form>
+		</form>
+	</div>
 </div>
 
-<div id="j-sidebar-container" >
-    <fieldset class="items-import">
-        <h4 class="page-header"><?php echo JText::_('COM_COMPARISONCHART_IMPORT_CSV'); ?>:</h4>
-        <form action="<?php echo JRoute::_('index.php?option=com_comparisonchart&task=chart.importItems'); ?>"
-              method="post" name="importForm" class="importForm" enctype="multipart/form-data">
-            <?php
-            foreach ($this->form->getFieldsets() as $fieldset) {
-                $fields = $this->form->getFieldset($fieldset->name);
-                if (count($fields) > 0) {
-                   // echo JHtml::_('tabs.panel', JText::_($fieldset->label), 'item-' . $fieldset->name);
-                    ?>
-                    <div class="items-import-adminform">
-                        <fieldset class="adminform">
-                            <ul class="">
-                                <?php
-                                foreach ($this->form->getFieldset($fieldset->name) as $field) {
-                                    ?>
-                                    <li><?php
-                                        echo $field->label;
-                                        echo $field->input;
-                                        ?></li>
-                                <?php } ?>
-                            </ul>
-                            <br class="clr"/>
 
-                            <div class="ex_down_sample">
-                                <a href="index.php?option=com_comparisonchart&task=downloadsample"
-                                   alt=""><?php echo JText::_('COM_COMPARISONCHART_DOWNLOAD_EXAMPLE'); ?></a>
-                            </div>
-                        </fieldset>
-                    </div>
-                <?php
-                }
-            }
-            ?>
-            <?php echo JHtml::_('form.token'); ?>
-        </form>
-</div>
-</fieldset>
 
 
 </div>
