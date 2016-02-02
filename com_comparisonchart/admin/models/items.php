@@ -33,7 +33,7 @@ class ComparisonchartModelItems extends JModelList {
       // $chart_title = $this->getUserStateFromRequest($this->context . '.filter.chart', 'filter_chart', '');
         $this->setState('filter.published', $published);
        //$this->setState('filter.chart', $chart_title);
-        parent::populateState();
+        parent::populateState($ordering, $direction);
     }
 
     protected function getListQuery() {

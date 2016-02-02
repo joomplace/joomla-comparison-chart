@@ -20,7 +20,8 @@ class ComparisonChartViewCharts extends BaseView {
         $this->chart = $model->getItems();
 
         $this->Itemid = $itemId = JRequest::getInt('Itemid');
-        ComparisonChartHelper::clearTrash();
+        $helper = new ComparisonChartHelper;
+		$helper->clearTrash();
         $canDo = ComparisonchartHelper::getActions();
 
         if ($canDo->get('core.xls')) {

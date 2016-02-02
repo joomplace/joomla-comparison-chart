@@ -15,7 +15,7 @@ class ComparisonChartModelItems extends JModelList
 {
 	protected $context = 'com_comparisonchart';
 
-	public function populateState()
+	public function populateState($ordering = null, $direction = null)
 	{
         $jinput = JFactory::getApplication()->input;
 		$app = JFactory::getApplication('site');
@@ -29,7 +29,7 @@ class ComparisonChartModelItems extends JModelList
 
 		$this->setState('chart.id', $id);
 
-		parent::populateState();
+		parent::populateState($ordering, $direction);
 	}
 
 	public function getListQuery()

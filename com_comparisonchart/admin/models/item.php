@@ -79,8 +79,11 @@ class ComparisonchartModelItem extends JModelAdmin
 	}
 
 
-    public function publish($ids)
+    public function publish(&$ids, $value = 1)
     {
+		if(is_array($ids)){
+			$ids = $ids[0];
+		}
         $db = JFactory::getDBO();
         if ($ids) {
             $query = "SELECT c.published"
@@ -88,17 +91,17 @@ class ComparisonchartModelItem extends JModelAdmin
                 . "\n WHERE c.id=" . intval($ids);
             ;
             $db->setQuery($query);
-            $ordering = $db->loadResult();
-            if (intval($ordering) == 1) {
+            $published = $db->loadResult();
+            if (intval($published) == 1) {
                 $db->setQuery("UPDATE #__cmp_chart_items  SET published=0  WHERE id=" . intval($ids));
                 $db->execute();
-                return $ordering;
+                return $published;
             } else {
                 $db->setQuery("UPDATE #__cmp_chart_items  SET published=1  WHERE id=" . intval($ids));
                 $db->execute();
-                return $ordering;
+                return $published;
             }
-            return $ordering;
+            return $published;
         }
         return false;
     }

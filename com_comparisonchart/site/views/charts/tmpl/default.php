@@ -159,10 +159,12 @@ if ($this->catid) {
                                                 ?>
                                             </div>
                                                     <!--<img class="ch_hide_item" src="components/com_comparisonchart/assets/images/close_compare.png" alt="" style="cursor:pointer;"/>-->
-                                            <?php if ($item->image and $this->params->item_image==1) { ?>
+                                            <?php JHTML::_('behavior.modal', 'a.cmp-modal'); if ($item->image and $this->params->item_image==1) { ?>
 
                                                 <div class="img_item">
-                                                    <img src="<?php echo $item->image; ?>" alt="<?php echo $item->title; ?>" width="<?php echo $this->params->item_image_width; ?>" />
+													<a class="cmp-modal" href="<?php echo $item->image; ?>">
+														<img src="<?php echo $item->image; ?>" alt="<?php echo $item->title; ?>" width="<?php echo $this->params->item_image_width; ?>" />
+													</a>
                                                     <?php
                                                     echo '<input type="hidden" value="' . $item->image . '" name="img_item' . $item->id . '" />';
                                                     ?>
