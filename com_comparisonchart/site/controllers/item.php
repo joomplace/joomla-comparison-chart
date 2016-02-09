@@ -21,6 +21,7 @@ class ComparisonChartControllerItem extends JControllerForm
 		$model = $this->getModel('item');
 		$item = $model->getItem();
 
+		$out = new stdClass();
 		$out->title = $item->title;
 		$out->img = JURI::root().$item->image;
 		$out->description = $item->description;
@@ -37,6 +38,7 @@ class ComparisonChartControllerItem extends JControllerForm
 		$model = $this->getModel('item');
 		$row = $model->getRow();
 
+		$out = new stdClass();
 		$out->title = $row->name;
 		$out->description = $row->description;
 

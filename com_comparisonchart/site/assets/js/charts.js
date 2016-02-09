@@ -144,7 +144,7 @@ jQuery(document).ready(function() {
         e.preventDefault();
         jQuery("table.pdtable tr.cmpTrHide").show();
         jQuery("table.pdtable tr.cmpTrHide").removeClass('cmpTrHide');
-        jQuery("table.pdtable tr.pline").find('td:not(.cellHide)').removeClass('cmpTdHide');
+        jQuery("table.pdtable tr.pline").show();
 
     });
     jQuery('a.ch_show_items').click(function(e) {
@@ -167,33 +167,31 @@ jQuery(document).ready(function() {
 
     });
 
-
-    jQuery('tr.pline:not(.pdsection)').each(function() {
-
-        tr = jQuery(this);
-
-        tds = tr.find('td');
-        tds_count = tds.length - 2;
-       // console.log(tds_count);
-
-        hide = 0;
-        res = 0;
-        tds.each(function() {
-            cur = this.textContent;
-            if (res == cur) {
-                hide++;
-            }
-            res = cur;
-        });
-        if (hide == tds_count) {
-            tr.addClass('equal');
-        }
-
-    });
-
     jQuery('a.ch_toggle_equal').click(function(e) {
         e.preventDefault();
-        jQuery('tr.equal').toggle();
+		
+		jQuery('tr.pline:not(.pdsection)').each(function() {
+
+			tr = jQuery(this);
+
+			tds = tr.find('td:visible');
+			tds_count = tds.length - 2;
+		   // console.log(tds_count);
+
+			hide = 0;
+			res = 0;
+			tds.each(function() {
+				cur = jQuery(this).find('input').val();
+				if (res == cur) {
+					hide++;
+				}
+				res = cur;
+			});
+			if (hide == tds_count) {
+				tr.toggle();
+			}
+
+		});
     });
 
     jQuery('#rgMasterTable2 tr.pdsection td').css('visibility', 'visible');

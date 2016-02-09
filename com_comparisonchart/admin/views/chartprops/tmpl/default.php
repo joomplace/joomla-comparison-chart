@@ -195,17 +195,7 @@ $sortFields = $this->getSortFields();
                                         <?php } ?>
                                     </td>
                                     <td class="title publish-prop">
-                                        <?php if ($item->published == 0) { ?>
-                                            <a class="btn btn-micro" id="<?php echo $item->id ?>" class="item-publish"
-                                               href="javascript:void(0);">
-                                                <i class="icon-unpublish" ></i>
-                                            </a>
-                                        <?php } else { ?>
-                                            <a class="btn btn-micro active" id="<?php echo $item->id ?>" class="item-publish"
-                                               href="javascript:void(0);">
-                                                <i class="icon-publish"></i>
-                                            </a>
-                                        <?php }?>
+                                        <?php echo JHtml::_('jgrid.published', $item->published, $i, 'chartprops.', $canChange); ?>
                                     </td>
                                     <td class="title">
                                         <?php echo $item->type; ?>

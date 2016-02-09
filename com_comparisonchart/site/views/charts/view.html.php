@@ -17,6 +17,7 @@ class ComparisonChartViewCharts extends BaseView {
         $model = $this->getModel();
         $model->getColumns();
 
+        $this->state = $model->getState();
         $this->chart = $model->getItems();
 
         $this->Itemid = $itemId = JRequest::getInt('Itemid');

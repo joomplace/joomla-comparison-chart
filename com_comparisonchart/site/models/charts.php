@@ -32,7 +32,7 @@ class ComparisonChartModelCharts extends JModelLegacy {
 //        echo "<pre>"; print_r($paramObj->get('show_title'));die;
         $this->setState('params', $paramObj);
 
-        $id = JRequest::getVar('id', 0, 'get', 'int');
+        $id = JRequest::getVar('id',JRequest::getVar('chart_id',JRequest::getVar('chart',0,'INT'),'INT'),'INT');
         $this->setState('chart.id', $id);
 
         $items = array();

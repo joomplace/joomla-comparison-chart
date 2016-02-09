@@ -63,7 +63,7 @@ class ComparisonchartTableChartprop extends JTable
 		return $this->greeting;
 	}
 
-	protected function _getAssetParentId($table = NULL, $id = NULL)
+	protected function _getAssetParentId(JTable $table = NULL, $id = NULL)
 	{
 		$asset = JTable::getInstance('Asset');
 		$asset->loadByName('com_comparisonchart');

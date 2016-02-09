@@ -12,7 +12,20 @@ jimport('joomla.application.component.controlleradmin');
 
 class ComparisonchartControllerChartprops extends JControllerAdmin
 {
-    public function getModel($name = 'Chartprops', $prefix = 'ComparisonchartModel')
+
+	public $view_list = 'chartprops';
+	
+	public function __construct($config = array())
+	{
+		$chart = JFactory::getApplication()->input->get('filter_chart','');
+		if($chart)
+			$this->view_list .='&filter_chart='.$chart;
+			
+		parent::__construct($config);
+	}
+	
+	
+    public function getModel($name = 'Chartprop', $prefix = 'ComparisonchartModel', $config = array())
     {
         $model = parent::getModel($name, $prefix, array('ignore_request' => true));
         return $model;

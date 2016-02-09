@@ -64,6 +64,8 @@ class ComparisonchartViewChartprops extends JViewLegacy {
         if ($canDo->get('core.edit')) {
             JToolBarHelper::editList('chartprop.edit', 'JTOOLBAR_EDIT');
             JToolBarHelper::divider();
+            JToolBarHelper::custom('chartprops.publish', 'publish.png', 'publish_f2.png', 'JTOOLBAR_PUBLISH', true);
+            JToolBarHelper::custom('chartprops.unpublish', 'unpublish.png', 'unpublish_f2.png', 'JTOOLBAR_UNPUBLISH', true);
             JToolBarHelper::divider();
         }
         if ($canDo->get('core.delete')) {

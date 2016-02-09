@@ -54,13 +54,14 @@ class ComparisonChartModelRows extends JModelLegacy {
 
             $id = $this->getState('chart.id');
             if(!$id){
-                $id=intval(JRequest::getVar('id'));
+                $id=JRequest::getVar('id',JRequest::getVar('chart_id',0,'INT'),'INT');
             }
 
             if ($id) {
                 $query->where('cr.chart_id=' . $id);
             }
 
+            $query->where('cr.published = "1"');
             $query->order('cr.ordering');
 
             $db->setQuery($query);
