@@ -43,7 +43,7 @@ class ComparisonchartTableChartprop extends JTable
 	{
 		$db = $this->getDBO();
 
-		$db->setQuery('DELETE FROM #__cmp_chart_rows WHERE item_id='.$pk);
+		$db->setQuery('DELETE FROM #__cmp_chart_rows WHERE id='.$pk);
 		if (!$db->execute()) {
 			return false;
 		}
