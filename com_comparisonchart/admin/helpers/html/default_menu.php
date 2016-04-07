@@ -42,7 +42,7 @@ if(empty($arr)){
 
 ?>
 
-<div id="jp-navbar" class="navbar navbar-static navbar-inverse">
+<div id="jp-navbar" class="navbar navbar-static navbar-inverse" style="clear: both">
     <div class="navbar-inner">
         <div class="container" style="width: auto;">
             <a class="brand" href="index.php?option=com_comparisonchart&view=about"><img class="jp-panel-logo" src="<?php echo JURI::root() ?>administrator/components/com_comparisonchart/assets/images/joomplace-logo.png" /> <?php echo JText::_('COM_COMPARISONCHART_JOOMPLACE') ?></a>
