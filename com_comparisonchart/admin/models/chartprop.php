@@ -78,31 +78,6 @@ class ComparisonchartModelChartprop extends JModelAdmin
 		return $form;
 	}
 
-
-    public function publish($ids)
-    {
-        $db = JFactory::getDBO();
-        if ($ids) {
-            $query = "SELECT c.published"
-                . "\n FROM #__cmp_chart_rows AS c"
-                . "\n WHERE c.id=" . intval($ids);
-            ;
-            $db->setQuery($query);
-            $ordering = $db->loadResult();
-            if (intval($ordering) == 1) {
-                $db->setQuery("UPDATE #__cmp_chart_rows  SET published=0  WHERE id=" . intval($ids));
-                $db->execute();
-                return $ordering;
-            } else {
-                $db->setQuery("UPDATE #__cmp_chart_rows  SET published=1  WHERE id=" . intval($ids));
-                $db->execute();
-                return $ordering;
-            }
-            return $ordering;
-        }
-        return false;
-    }
-
     public function getChartId($id)
     {
         $db = JFactory::getDBO();

@@ -31,21 +31,6 @@ class ComparisonchartControllerChartprops extends JControllerAdmin
         return $model;
     }
 
-   
-    public function publishProp()
-    {
-        $id = intval(JRequest::getVar('id'));
-        $model = $this->getModel();
-
-        $data = array();
-        // Save the ordering
-        $return = $model->publish($id);
-
-        $data['publish'] = $return;
-        echo json_encode($data);
-        JFactory::getApplication()->close();
-    }
-
     public function delete()
     {
         $ids = JRequest::getVar('cid', 'array');

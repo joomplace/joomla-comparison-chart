@@ -243,34 +243,6 @@ $sortFields = $this->getSortFields();
                 </div>
     </form>
 </div>
-<script type="text/javascript">
-    $ = jQuery.noConflict();
-
-    jQuery(document).ready(function () {
-        $('#itemsList').on("click", ".publish-prop", function (e) {
-              var id=$(this).find('a').attr('id');
-            $.ajax({
-                url: "index.php?option=com_comparisonchart&task=chartprops.publishProp",
-                type: "POST",
-                data:{
-                    'id':id
-                },
-                success: function (obj) {
-                    var data = $.parseJSON(obj);
-                   if (data.publish === '0') {
-                        $('#'+id).addClass('active');
-                        $('#'+id).html('<i class="icon-publish"></i>');
-                    } else {
-                        $('#'+id).removeClass('active');
-                        $('#'+id).html('<i class="icon-unpublish"></i>');
-                    }
-                }
-            });
-        });
-    });
-
-
-</script>
 <?php $improve_chart=ComparisonChartHelper::improveChart();
 if(!intval($improve_chart)){
     ?>
