@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<extension type="package" version="3.x" method="upgrade">
+  <name>Comparison Chart</name>
+  <creationDate>March 2014</creationDate>
+  <author>JoomPlace Team</author>
+  <packagename>comparisonchart</packagename>
+  <authorEmail>support@joomplace.com</authorEmail>
+  <authorUrl>www.joomplace.com</authorUrl>
+  <copyright>(C) JoomPlace, www.joomplace.com</copyright>
+  <license>GNU/GPL http://www.gnu.org/copyleft/gpl.html</license>
+  <version>2.2.0.005</version>
+  <description>Comparison Chart</description>
+  <files folder="packages">
+    <file type="component" id="com_comparisonchart">com_comparisonchart.zip</file>
+    <file type="module" id="comparisonchart" client="site">mod_latest_charts.zip</file>
+    <file type="plugin" id="comparisonchart" group="content">plg_content_comparisonchart.zip</file>
+    <file type="plugin" id="comparisonchart" group="editors-xtd">plg_editors_xtd_comparisonchart.zip</file>
+  </files>
+</extension>
