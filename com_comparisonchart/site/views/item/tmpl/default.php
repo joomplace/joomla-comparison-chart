@@ -14,7 +14,7 @@ $item = $this->item;
 <div class="comparisonchart-item">
 	<h1 class="cmp-item-header"><?php echo $this->item->title;?></h1>
 	<div class="cmp-item-image">
-		<img src="<?php	echo $item->image;?>" />
+		<img src="<?php	echo '/'.JUri::root(true).$item->image;?>" />
 	</div>
 	<div class="cmp-item-description">
 		<?php

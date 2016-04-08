@@ -20,7 +20,7 @@ $item = $this->item;
 	 <?php if($item->image!=''){?>
         <div class="cmp-item-image">
            
-		<img src="<?php	echo $item->image;?>" />
+		<img src="<?php	echo '/'.JUri::root(true).$item->image;?>" />
 	</div>
          <?php }?>
 	<div class="cmp-item-description">

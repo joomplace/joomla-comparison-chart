@@ -133,7 +133,7 @@ if ($this->catid) {
                                                 <?php
                                                 if ($this->template) {
                                                     if ($this->template->close_image)
-                                                        echo '<img src="' . JURI::root() . $this->template->close_image . '" >';
+                                                        echo '<img src="' . '/'.JURI::root(true) . $this->template->close_image . '" >';
                                                 }
                                                 ?>
                                                 </a>
@@ -163,7 +163,7 @@ if ($this->catid) {
 
                                                 <div class="img_item">
 													<a class="cmp-modal" href="<?php echo $item->image; ?>">
-														<img src="<?php echo $item->image; ?>" alt="<?php echo $item->title; ?>" width="<?php echo $this->params->item_image_width; ?>" />
+														<img src="<?php echo '/'.JUri::root(true).$item->image; ?>" alt="<?php echo $item->title; ?>" width="<?php echo $this->params->item_image_width; ?>" />
 													</a>
                                                     <?php
                                                     echo '<input type="hidden" value="' . $item->image . '" name="img_item' . $item->id . '" />';
@@ -202,7 +202,7 @@ if ($this->catid) {
                                                     <?php
                                                     if ($this->template) {
                                                         if ($this->template->close_image)
-                                                            echo '<img src="' . JURI::root() . $this->template->close_image . '" >';
+                                                            echo '<img src="' . '/'.JURI::root(true) . $this->template->close_image . '" >';
                                                     }
                                                     ?>
                                                     </a>
@@ -250,27 +250,27 @@ if ($this->catid) {
                                                             if ($this->template) {
                                                                 if ($this->template->check_true) {
 
-                                                                    echo '<img src="' . JURI::root() . $this->template->check_true . '" >';
+                                                                    echo '<img src="' . '/'.JURI::root(true) . $this->template->check_true . '" >';
 
 
                                                                     echo '<input type="hidden" value="+" name="column[' . $row->id . '][' . $item->id . ']" />';
                                                                 } else {
-                                                                    echo '<img src="components/com_comparisonchart/assets/images/ico_yes.png" >';
+                                                                    echo '<img src="'.'/'.JUri::root(true).'components/com_comparisonchart/assets/images/ico_yes.png" >';
 
                                                                     echo '<input type="hidden" value="+"  name="column[' . $row->id . '][' . $item->id . ']" />';
                                                                 }
                                                             } else {
-                                                                echo '<img src="components/com_comparisonchart/assets/images/ico_yes.png" >';
+                                                                echo '<img src="'.'/'.JUri::root(true).'components/com_comparisonchart/assets/images/ico_yes.png" >';
 
                                                                 echo '<input type="hidden" value="+"  name="column[' . $row->id . '][' . $item->id . ']" />';
                                                             }
                                                         } else {
                                                             if ($this->template->check_false) {
-                                                                echo '<img src="' . JURI::root() . $this->template->check_false . '" >';
+                                                                echo '<img src="' . '/'.JUri::root(true). $this->template->check_false . '" >';
 
                                                                 echo '<input type="hidden" value="-"  name="column[' . $row->id . '][' . $item->id . ']" />';
                                                             } else {
-                                                                echo '<img src="components/com_comparisonchart/assets/images/ico_no.png" >';
+                                                                echo '<img src="'.'/'.JUri::root(true).'components/com_comparisonchart/assets/images/ico_no.png" >';
 
                                                                 echo '<input type="hidden" value="-"  name="column[' . $row->id . '][' . $item->id . ']" />';
                                                             }

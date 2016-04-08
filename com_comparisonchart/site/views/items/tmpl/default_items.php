@@ -46,7 +46,7 @@ JHtml::_('behavior.modal');
                         <input type="text" name="somename[]" value="1"/>
 		</label>
 		<?php if ($item[$i]->image and $this->params->get('item_image', 1)) { ?>
-			<img src="<?php echo $item[$i]->image; ?>" align="<?php echo $this->params->get('item_image_align', 'right'); ?>" alt="<?php echo $item[$i]->title; ?>" width="<?php echo $this->params->get('item_image_width', 128); ?>" />
+			<img src="<?php echo '/'.JUri::root(true).$item[$i]->image; ?>" align="<?php echo $this->params->get('item_image_align', 'right'); ?>" alt="<?php echo $item[$i]->title; ?>" width="<?php echo $this->params->get('item_image_width', 128); ?>" />
 		<?php } ?>
 		<div class="description" >
 			<?php echo $item[$i]->description; ?>

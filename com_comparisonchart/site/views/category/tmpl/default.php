@@ -24,7 +24,7 @@ if ($this->chart->flag != false) {
 
         <?php if (($this->category->params->image) && ($this->params->get('category_image'))) { ?>
             <div class="image" >
-                <img src="<?php echo $this->category->params->image ?>" alt="" width="100"/>
+                <img src="<?php echo '/'.JUri::root(true).$this->category->params->image ?>" alt="" width="100"/>
             </div>
         <?php
         }

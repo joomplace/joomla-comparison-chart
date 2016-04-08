@@ -43,7 +43,7 @@ JHtml::_('behavior.modal');
 			?>
 		</label>
 		<?php if ($item->image and $this->params->get('item_image', 1)) { ?>
-			<img src="<?php echo $item->image; ?>" align="<?php echo $this->params->get('item_image_align', 'right'); ?>" alt="<?php echo $item->title; ?>" width="<?php echo $this->params->get('item_image_width', 128); ?>" />
+			<img src="<?php echo '/'.JUri::root(true).$item->image; ?>" align="<?php echo $this->params->get('item_image_align', 'right'); ?>" alt="<?php echo $item->title; ?>" width="<?php echo $this->params->get('item_image_width', 128); ?>" />
 		<?php } ?>
 		<div class="description" >
 			<?php echo $item->description; ?>
