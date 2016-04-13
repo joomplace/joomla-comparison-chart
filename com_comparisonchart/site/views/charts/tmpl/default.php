@@ -92,7 +92,7 @@ if ($this->catid) {
                                 <tr class="pdtitle" style="height: 20px;">
                                     <td valign="top" style="min-width:230px; vertical-align: bottom !important;" >
                                         <?php
-                                        if ($this->params->show_toogle_button) {
+                                        if ($this->state->get('chart.show_toogle_button')) {
                                             ?>
                                             <a href="#" class="ch_toggle_equal" >
                                                 <?php echo JText::_('COM_COMPARISONCHART_TOGGLE_EQUAL'); ?>
@@ -100,7 +100,7 @@ if ($this->catid) {
                                             <?php
                                         }
 
-                                        if ($this->params->show_hidden_param_button==1) {
+                                        if ($this->state->get('chart.show_hidden_param_button')) {
                                             ?>
                                             <a href="#" class="ch_show_params" >
                                                 <?php echo JText::_('COM_COMPARISONCHART_SHOW_PARAMS'); ?>
@@ -108,7 +108,7 @@ if ($this->catid) {
                                             <?php
                                         }
 
-                                        if ($this->params->show_hidden_items_button) {
+                                        if ($this->state->get('chart.show_hidden_items_button')) {
                                             ?>
                                             <a href="#" class="ch_show_items" >
                                                 <?php echo JText::_('COM_COMPARISONCHART_SHOW_ITEMS'); ?>

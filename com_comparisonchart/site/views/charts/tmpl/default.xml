@@ -25,5 +25,34 @@
 			/>
 		</fieldset>
 	</fields>
+	<fields name="params">
+		<fieldset name="basic" label="COM_COMPARISONCHART_CHART_SETTINGS_LABEL">
+
+		<field name="show_toogle_button" type="radio"	default=""
+			   class="btn-group"
+			   label="COM_COMPARISONCHART_SETTINGS_SHOW_TOOGLE_BUTTON"
+			   description="COM_COMPARISONCHART_SETTINGS_SHOW_TOOGLE_BUTTON">
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+		<field name="show_hidden_param_button" type="radio"	default=""
+			   class="btn-group"
+			   label="COM_COMPARISONCHART_SETTINGS_SHOW_HP_BUTTON"
+			   description="COM_COMPARISONCHART_SETTINGS_SHOW_HP_BUTTON">
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+		<field name="show_hidden_items_button" type="radio"	default=""
+			   class="btn-group"
+			   label="COM_COMPARISONCHART_SETTINGS_SHOW_HI_BUTTON"
+			   description="COM_COMPARISONCHART_SETTINGS_SHOW_HI_BUTTON">
+			<option value="">JGLOBAL_USE_GLOBAL</option>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+		</fieldset>
+	</fields>
 </metadata>
 

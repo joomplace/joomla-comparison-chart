@@ -29,10 +29,36 @@ class ComparisonChartModelCharts extends JModelLegacy {
         foreach ($params as $k => $v) {
             $paramObj->set($k, $v);
         }
-//        echo "<pre>"; print_r($paramObj->get('show_title'));die;
+        // echo "<pre>"; print_r($paramObj->get('show_title'));die;
         $this->setState('params', $paramObj);
 
+        //$input = JFactory::getApplication()->input;
+
+        $com_settings = JComponentHelper::getParams('com_comparisonchart');
+
+        $app_config = JFactory::getApplication('site')->getParams();
+
+        $show_toogle_button = $app_config->get('show_toogle_button');
+        $show_hidden_param_button = $app_config->get('show_hidden_param_button');
+        $show_hidden_items_button = $app_config->get('show_hidden_items_button');
+        
+
+        if($show_toogle_button === ""){
+            $show_toogle_button = $com_settings->get('show_toogle_button',0,'INT');
+        }
+        if($show_hidden_param_button === ""){
+            $show_hidden_param_button = $com_settings->get('show_hidden_param_button',0,'INT');
+        }
+        if($show_hidden_items_button === ""){
+            $show_hidden_items_button = $com_settings->get('show_hidden_param_button',0,'INT');
+        }
+
+        $this->setState('chart.show_toogle_button', $show_toogle_button );
+        $this->setState('chart.show_hidden_param_button', $show_hidden_param_button );
+        $this->setState('chart.show_hidden_items_button', $show_hidden_items_button );
+
         $id = JRequest::getVar('id',JRequest::getVar('chart_id',JRequest::getVar('chart',0,'INT'),'INT'),'INT');
+
         $this->setState('chart.id', $id);
 
         $items = array();
