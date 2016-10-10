@@ -92,7 +92,7 @@ if ($this->catid) {
                                 <tr class="pdtitle" style="height: 20px;">
                                     <td valign="top" style="min-width:230px; vertical-align: bottom !important;" >
                                         <?php
-                                        if ($this->state->get('chart.show_toogle_button')) {
+                                        if ($this->params->show_toogle_button) {
                                             ?>
                                             <a href="#" class="ch_toggle_equal" >
                                                 <?php echo JText::_('COM_COMPARISONCHART_TOGGLE_EQUAL'); ?>
@@ -100,7 +100,7 @@ if ($this->catid) {
                                             <?php
                                         }
 
-                                        if ($this->state->get('chart.show_hidden_param_button')) {
+                                        if ($this->params->show_hidden_param_button==1) {
                                             ?>
                                             <a href="#" class="ch_show_params" >
                                                 <?php echo JText::_('COM_COMPARISONCHART_SHOW_PARAMS'); ?>
@@ -108,7 +108,7 @@ if ($this->catid) {
                                             <?php
                                         }
 
-                                        if ($this->state->get('chart.show_hidden_items_button')) {
+                                        if ($this->params->show_hidden_items_button) {
                                             ?>
                                             <a href="#" class="ch_show_items" >
                                                 <?php echo JText::_('COM_COMPARISONCHART_SHOW_ITEMS'); ?>
@@ -246,35 +246,46 @@ if ($this->catid) {
                                                 switch ($row->type) {
 
                                                     case 'check':
-                                                        if ($item_value->get('value', 0)) {
+                                                        if ($item_value->get('value', 0) == 1) {
                                                             if ($this->template) {
                                                                 if ($this->template->check_true) {
 
-                                                                    echo '<img src="' . '/'.JURI::root(true) . $this->template->check_true . '" >';
+                                                                    echo '<img src="'.JUri::root().'components/com_comparisonchart/assets/images/ico_yes.gif' . '" >';
 
 
                                                                     echo '<input type="hidden" value="+" name="column[' . $row->id . '][' . $item->id . ']" />';
                                                                 } else {
-                                                                    echo '<img src="'.'/'.JUri::root(true).'components/com_comparisonchart/assets/images/ico_yes.png" >';
+                                                                    echo '<img src="'.'/'.JUri::root().'components/com_comparisonchart/assets/images/ico_yes.gif" >';
 
                                                                     echo '<input type="hidden" value="+"  name="column[' . $row->id . '][' . $item->id . ']" />';
                                                                 }
                                                             } else {
-                                                                echo '<img src="'.'/'.JUri::root(true).'components/com_comparisonchart/assets/images/ico_yes.png" >';
+                                                                echo '<img src="'.'/'.JUri::root().'components/com_comparisonchart/assets/images/ico_yes.gif" >';
 
                                                                 echo '<input type="hidden" value="+"  name="column[' . $row->id . '][' . $item->id . ']" />';
                                                             }
-                                                        } else {
+                                                        } else if ($item_value->get('value', 0) == 3) {
                                                             if ($this->template->check_false) {
-                                                                echo '<img src="' . '/'.JUri::root(true). $this->template->check_false . '" >';
+                                                                echo '<img src="' . JUri::root().'components/com_comparisonchart/assets/images/ico_bulb.gif' . '" >';
 
                                                                 echo '<input type="hidden" value="-"  name="column[' . $row->id . '][' . $item->id . ']" />';
                                                             } else {
-                                                                echo '<img src="'.'/'.JUri::root(true).'components/com_comparisonchart/assets/images/ico_no.png" >';
+                                                                echo '<img src="'.'/'.JUri::root().'components/com_comparisonchart/assets/images/ico_bulb.gif" >';
 
                                                                 echo '<input type="hidden" value="-"  name="column[' . $row->id . '][' . $item->id . ']" />';
                                                             }
-                                                        }
+                                                        } else {
+                                                            if ($this->template->check_false) {
+                                                                echo '<img src="' . JUri::root().'components/com_comparisonchart/assets/images/ico_no.gif' . '" >';
+
+                                                                echo '<input type="hidden" value="-"  name="column[' . $row->id . '][' . $item->id . ']" />';
+                                                            } else {
+                                                                echo '<img src="'.'/'.JUri::root().'components/com_comparisonchart/assets/images/ico_no.gif" >';
+
+                                                                echo '<input type="hidden" value="-"  name="column[' . $row->id . '][' . $item->id . ']" />';
+                                                            }
+                                                    }
+
                                                         break;
                                                     case 'rating':
                                                         echo $this->getRatingStars($item->id, $row->id);

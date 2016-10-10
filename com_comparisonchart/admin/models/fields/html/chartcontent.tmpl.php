@@ -13,23 +13,21 @@ defined('_JEXEC') or die;
 <script type="text/javascript" >
 	function toggleCheckbox (el) {
 		var check = el.previousSibling;
-		if (check.checked == true) {
-			check.checked = false;
-			<?php if ($template_settings)
-			{
-				$img_false = JUri::root().$template_settings->check_false;
-			}else $img_false = JUri::root().'components/com_comparisonchart/assets/images/ico_no.gif';
-			?>
+		if (check.value == 1) {
+			check.value = 2;
+			<?php $img_false = JUri::root().'components/com_comparisonchart/assets/images/ico_no.gif'; ?>
 			el.src = '<?php echo $img_false;?>';
+		} else if (check.value == 2) {
+			check.value = 3;
+			<?php  $img_bulb = JUri::root().'components/com_comparisonchart/assets/images/ico_bulb.gif'; ?>
+			el.src = '<?php echo $img_bulb;?>';
 		} else {
-			check.checked = true;
-			<?php if ($template_settings)
-			{
-				$img_true = JUri::root().$template_settings->check_true;
-			}else $img_true = JUri::root().'components/com_comparisonchart/assets/images/ico_yes.gif';
-			?>
-			el.src = '<?php echo $img_true;?>';
+			check.value = 1;
+			<?php $img_true = JUri::root().'components/com_comparisonchart/assets/images/ico_yes.gif'; ?>
+				el.src = '<?php echo $img_true;?>';
 		}
+
+
 	}
 	function reset_rating(id,rid)
 	{
@@ -100,22 +98,28 @@ defined('_JEXEC') or die;
 						$check = '';
 						$ico = 'no';
 						if (isset($this->value[$row->id])) {
-							if ($this->value[$row->id]->value_data) {
-								$check = 'checked="checked"';
-								$ico = 'yes';
+							switch ($this->value[$row->id]->value_data) {
+								case('1'): $ico = 'yes';
+									break;
+								case('2'): $ico = 'no';
+									break;
+								case('3'): $ico = 'bulb';
+									break;
+								default: $ico = 'no';
 							}
 						}
-						if ($template_settings)
-							{
-								$img_false = JUri::root().$template_settings->check_false;
-								$img_true = JUri::root().$template_settings->check_true;
-								if ($ico=='no') $img = $img_false; else $img = $img_true;
-							}
-						else
-						{
-							$img = JUri::root().'components/com_comparisonchart/assets/images/ico_'.$ico.'.gif';
-						}
-						echo '<input class="hide" type="checkbox" name="'.$this->name.'['.$row->id.'][value]" value="1" '.$check.' />';
+
+					$img = JUri::root().'components/com_comparisonchart/assets/images/ico_'.$ico.'.gif';
+
+
+					if($_SERVER['REMOTE_ADDR']=='82.209.244.106' || 0) {
+						echo '<pre>';
+						print_r($this->value[$row->id]);
+						echo '</pre>';
+						echo '<br>';
+					}
+
+						echo '<input class="hide" type="checkbox" name="'.$this->name.'['.$row->id.'][value]" value="' . $this->value[$row->id]->value_data . '" checked="checked"/>';
 						echo '<img style="cursor:pointer;" src="'.$img.'" onclick="toggleCheckbox(this);" />';
 						break;
 					case 'rating':
