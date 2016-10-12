@@ -440,20 +440,14 @@ class plgContentComparisonchart extends JPlugin {
                                                     }
                                                     switch ($row->type) {
                                                         case 'check':
-                                                            if ($item_value->get('value', 0)) {
-                                                                if ($this->template) {
-                                                                    if ($this->template->check_true)
-                                                                        echo '<img src="' . JURI::root() . $this->template->check_true . '" >';
-                                                                    else
-                                                                        echo '<img src="components/com_comparisonchart/assets/images/ico_yes.png" >';
-                                                                }
-                                                                else
-                                                                    echo '<img src="components/com_comparisonchart/assets/images/ico_yes.png" >';
+                                                            $icon_value = $item_value->get('value', 0);
+
+                                                            if ($icon_value == 1) {
+                                                                 echo '<img src="'.JUri::root().'components/com_comparisonchart/assets/images/ico_yes.gif' . '" >';
+                                                            } else if ($icon_value == 3) {
+                                                                echo '<img src="' . JUri::root().'components/com_comparisonchart/assets/images/ico_bulb.gif' . '" >';
                                                             } else {
-                                                                if ($this->template->check_false)
-                                                                    echo '<img src="' . JURI::root() . $this->template->check_false . '" >';
-                                                                else
-                                                                    echo '<img src="components/com_comparisonchart/assets/images/ico_no.png" >';
+                                                                echo '<img src="' . JUri::root().'components/com_comparisonchart/assets/images/ico_no.gif' . '" >';
                                                             }
                                                             break;
                                                         case 'rating':
