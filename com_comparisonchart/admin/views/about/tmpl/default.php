@@ -42,20 +42,21 @@ JHtml::_('behavior.tooltip');
                     " 3.0+. " . JText::_('COM_CHART_BE_CONTROL_PANEL_DEVELOPED_BY'); ?> <a href="http://www.joomplace.com/" target="_blank">JoomPlace</a>.
             </th>
         </tr>
-        <tr>
-            <td width="120"><?php echo JText::_('COM_COMPARISONCHART_ABOUT_IVER') . ':'; ?></td>
-            <td class="chart_control_panel_current_version"><?php echo $this->version;  ?></td>
-        </tr>
-        <tr>
-            <td><?php echo JText::_('COM_COMPARISONCHART_ABOUT_LVER') . ':'; ?></td>
-            <td>
-                <div id="compchart_LatestVersion">
-                    <a href="check_now" onclick="return compchart_CheckVersion('<?php echo JText::_('COM_COMPARISONCHART_ABOUT_VER_LOADING'); ?>');" class="update_link">
-                        <?php echo JText::_('COM_COMPARISONCHART_ABOUT_CHECKNOW'); ?>
-                    </a>
-                </div>
-            </td>
-        </tr>
+        <!-- Hide current and latest version since integrate Joomla update system -->
+<!--        <tr>-->
+<!--            <td width="120">--><?php //echo JText::_('COM_COMPARISONCHART_ABOUT_IVER') . ':'; ?><!--</td>-->
+<!--            <td class="chart_control_panel_current_version">--><?php //echo $this->version;  ?><!--</td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>--><?php //echo JText::_('COM_COMPARISONCHART_ABOUT_LVER') . ':'; ?><!--</td>-->
+<!--            <td>-->
+<!--                <div id="compchart_LatestVersion">-->
+<!--                    <a href="check_now" onclick="return compchart_CheckVersion('--><?php //echo JText::_('COM_COMPARISONCHART_ABOUT_VER_LOADING'); ?><!--');" class="update_link">
+//                        <?php //echo JText::_('COM_COMPARISONCHART_ABOUT_CHECKNOW'); ?>
+<!--                    </a>-->
+<!--                </div>-->
+<!--            </td>-->
+<!--        </tr>-->
         <tr>
             <td><?php echo JText::_('COM_COMPARISONCHART_ABOUT_ABOUT') . ':'; ?></td>
             <td>
