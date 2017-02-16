@@ -16,4 +16,7 @@
     <file type="plugin" id="comparisonchart" group="content">plg_content_comparisonchart.zip</file>
     <file type="plugin" id="comparisonchart" group="editors-xtd">plg_editors_xtd_comparisonchart.zip</file>
   </files>
+  <updateservers>
+    <server type="collection" priority="1" name="Joomplace Update Site">http://www.joomplace.com/updates/collections.xml</server>
+  </updateservers>
 </extension>
