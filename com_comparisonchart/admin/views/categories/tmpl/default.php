@@ -241,13 +241,8 @@ $sortFields = $this->getSortFields();
                             <?php } ?>
 			</tbody>
 		</table>
-		<?php 
-		$this->setLayout('default');
-		$this->addTemplatePath(dirname(__DIR__).'/tmpl'); 
-		
-		//Load the batch processing form.
-		echo $this->loadTemplate('batch'); 
-		?>
+		<?php //Load the batch processing form. ?>
+		<?php echo $this->loadTemplate('batch'); ?>
 
 		<input type="hidden" name="extension" value="<?php echo $extension; ?>" />
 		<input type="hidden" name="task" value="" />
