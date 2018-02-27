@@ -4,7 +4,15 @@
     <fieldset name="settings"
                   label="COM_COMPARISONCHART_SETTINGS_GLOBAL_MENU"
     >
-		
+        <field name="chart_description"
+               type="radio"
+               default="0"
+               class="btn-group"
+               label="COM_COMPARISONCHART_CHART_DESCRIPTION_LABEL"
+               description="COM_COMPARISONCHART_CHART_DESCRIPTION_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
         <field name="show_title" type="radio"	default="0"	
                        class="btn-group"
                        label="COM_COMPARISONCHART_DESC" 
