@@ -553,23 +553,11 @@ dl.tabs dt {
 }
 
 #pgm_dashboard {
-
     margin: 20px 10px 0 0;
-
-    width: 49%;
-
+    width: 48%;
     min-height: 100px;
-
     height: auto;
-
-    /*  background: #ccc;
-  
-      border-radius: 3px;
-  
-      border:1px solid #AAA;*/
-
     float: left;
-
 }
 
 #pgm_collapse {
@@ -888,6 +876,14 @@ table#jform_description_tbl {
     background-color: rgb(248,238,185);
     top: 35px;
     box-shadow: 0 3px 10px 1px #ccc;
+}
+#notification .icon-remove{
+    position: absolute;
+    left: 10px;
+    top: 12px;
+}
+#notification .jb-survey{
+    padding-left: 15px;
 }
 
 .chart_control_panel_table {
