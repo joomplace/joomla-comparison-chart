@@ -174,7 +174,7 @@ fieldset.adminform fieldset.radio label, fieldset.panelform fieldset.radio label
 
 .thank_fdiv {
     float: left;
-    width: 720px;
+    width: 100%;
 }
 
 .thank_rate {
@@ -470,7 +470,7 @@ dl.tabs dt {
 
     float: left;
 
-    width: 720px;
+    width: 100%;
 
 }
 
@@ -554,7 +554,7 @@ dl.tabs dt {
 
 #pgm_dashboard {
     margin: 20px 10px 0 0;
-    width: 48%;
+    width: 47%;
     min-height: 100px;
     height: auto;
     float: left;
