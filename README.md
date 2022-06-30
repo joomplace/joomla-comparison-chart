@@ -34,15 +34,12 @@ The component provides a possibility to use HTML tags to insert pictures, links,
 <h2><b>FREQUENTLY ASKED QUESTIONS</b></h2>
 
 <b><i>I have some problems with this Joomla comparison chart...</i></b>
-
-Make sure your site's URL is equal to mosConfig_live_site i.e.www.site.com will work, but not site.com.<br />
-Maybe your server has denied the rule to run scripts outside the www root folder.<br />
-Please make sure all comparison charts files have 644 permissions and folders 755.
+- Make sure your site's URL is equal to mosConfig_live_site i.e.www.site.com will work, but not site.com.
+- Maybe your server has denied the rule to run scripts outside the www root folder.
+- Please make sure all comparison charts files have 644 permissions and folders 755.
 
 <b><i>How I can insert images into my Joomla comparison chart?</i></b>
-
-You can insert the images the following way: insert html code of the "img" element into the text fields of Comparison chart: image alt text
+- You can insert the images the following way: insert html code of the "img" element into the text fields of Comparison chart: image alt text
 
 <b><i>How I can insert special chars into a comparison chart?</i></b>
-
-You can insert special characters this way: '?' = "ouml"; ect. You can read about special characters <a href="https://www.degraeve.com/reference/specialcharacters.php" target="_blank" rel="noopener noreferrer">here</a>.
+- You can insert special characters this way: '?' = "ouml"; ect. You can read about special characters <a href="https://www.degraeve.com/reference/specialcharacters.php" target="_blank" rel="noopener noreferrer">here</a>.
